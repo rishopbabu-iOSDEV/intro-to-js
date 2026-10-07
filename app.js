@@ -218,7 +218,7 @@ for(let i=1;i<=5;i++){
 let count=0;
 while (count<5){
     console.log(`Count is: ${count}`);
-    Count++;
+    count++;
 }
 
 
@@ -231,30 +231,103 @@ while (count<5){
 
 // FUNCTIONS
 
+// Function without parameters and without return statement
+function makeACoffee() {
+    console.log("Turn on the Gas stove with lighter");
+    console.log("Put a pan on the stove");
+    console.log("Add some water to the pan");
+    console.log("Add coffee powder to the boiling water");
+    console.log("Add some sugar to the coffee");
+    console.log("Add milk to the coffee");
+    console.log("wait for 2 to 3 minutes");
+    console.log("Turn off the stove and serve the coffee in a cup.");
+}
+
+// makeACoffee();
+// makeACoffee();
+
+// Function with parameters and without return statement
+
+function makeACoffee(isSugarNeeded, isMilkNeeded) {
+    console.log("Turn on the Gas stove with lighter");
+    console.log("Put a pan on the stove");
+    console.log("Add some water to the pan");
+    console.log("Add coffee powder to the boiling water");
+
+    if(isSugarNeeded){
+        console.log("Add some sugar to the coffee");
+    }
+
+    if(isMilkNeeded){
+        console.log("Add milk to the coffee");
+    }
+    console.log("wait for 2 to 3 minutes");
+    console.log("Turn off the stove and serve the coffee in a cup.");
+}
+
+
+makeACoffee(false, true);
+
+
+// Function with parameters and with return statement
+
+function addTwoNumbers(number1, number2) {
+    let sum = number1 + number2;
+    return sum;
+}
+
+let result =addTwoNumbers(5, 10); // This will return 15 but not print it
+console.log(`The sum of 5 and 10 is: ${result}`); // This will print the result
+
+
+// Function without parameters and with return statement
+
+function getMyName() {
+    return "Rishop Babu";
+}
+
+let myName = getMyName(); // This will return "Rishop Babu" but not print it
+console.log(`My name is: ${myName}`); // This will print the name
 
 
 
+// Function Expression
+const myNameFunction = function() {
+    return "Rishop Babu";
+}
+
+console.log(`My name is: ${myNameFunction()}`); // This will print the name
 
 
 
+//function double(n){
+ //   return n*2;
+//}
+
+// const double = function(n){
+//     return n*2;
+// }
+
+// const double = (n) => {
+//     return n*2;
+// }
+
+const doubleTheNumber = (n) => n*2;
+console.log(`Double of 5 is: ${doubleTheNumber(5)}`); // This will print the double of 5
+
+
+const divide= () => 10/2;
+console.log(`Division of 10 by 2 is: ${divide()}`); // This will print the division result
+
+function calculateBillOne(itemPrice, quantity) {
+    return itemPrice * quantity;
+}
 
 
 
+const greet = (name = "Friend") => {
+ return `Hello, ${name}! Welcome to our website.`;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(greet("Rishop"));
+console.log(greet());

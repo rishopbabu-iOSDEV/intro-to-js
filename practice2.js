@@ -96,21 +96,3 @@ console.log(newStudents);
 // ------------------------------------------------------------
 // ============================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-rishopbabu-iOSDEV
-
-https://github.com/rishopbabu-iOSDEV/intro-to-js.git

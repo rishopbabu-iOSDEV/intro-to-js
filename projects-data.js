@@ -27,15 +27,56 @@
 
 // Step 1-3: declare `const projects = [ ... ]` with 4-6 objects,
 // each matching the exact shape shown above.
+const porjects = [
+    {
+        id: 1,
+        title: "Portfolio Website",
+        description: "A responsive personal portfolio website.",
+        category: "Web",
+        technologies: ["HTML", "CSS"],
+        featured: true
+    },
+    {
+        id: 2,
+        title: "Recepie card generator",
+        description: "A static page laying out recipe cards with images, ingredient lists, and step-by-step instructions.",
+        category: "web",
+        technologies: ["HTML", "CSS"],
+        featured: false
+    },
+    {
+        id: 3,
+        title: "Tic-Tac-Toe Board",
+        description: "A styled, static Tic-Tac-Toe game board and layout, designed as a future JavaScript project.",
+        category: "Design",
+        technologies: ["HTML", "CSS"],
+        featured: false
+    },
+    {
+        id: 4,
+        title: "Weather Dashboard Mockup",
+        description: "A visual mockup of a weather dashboard, focused on grid layout and a clean typographic hierarchy.",
+        category: "Design",
+        technologies: ["HTML", "CSS"],
+        featured: true
+    },
+]
 
 
 // Step 4: write a .forEach() call that logs each project as:
 // "Title — description [category]"
-
+porjects.forEach((project) => {
+    console.log(`${project.title} - ${project.description} [${project.category}]`)
+})
 
 // Step 5: write a .map() pass that builds a NEW array of those
 // same formatted strings (remember: .map()'s callback must
 // `return` a value), and log that new array.
+const formattedProjects = porjects.map((project) => {
+    return `${project.title} - ${project.description} [${project.category}]`
+});
+
+console.log(formattedProjects);
 
 
 // Tonight's homework ("Finalize Your Project Data") continues

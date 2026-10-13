@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
+    <button id="navToggle" aria-label="Toggle navigation menu">☰</button>
+    <button id="darkAndLight" aria-label="Toggle light and dark mode">🌓</button>
+    <nav class="siteNav">
+        <a href="" target="_blank">Home</a>
+        <a href="" target="_blank">About</a>
+        <a href="" target="_blank">Projects</a>
+        <a href="" target="_blank">Contact</a>
+    </nav>
     <h1 id="title">College Website</h1>
     <p class="message">Welcome, students!</p>
     <p class="message">Welcome, students!</p>
@@ -23,8 +33,24 @@
 
     <div id="box"></div>
 
+    <label for="message">Message</label>
+    <textarea id="message" maxlength="200"></textarea>
+    <p id="charCount">0 / 200</p>
+
+    <ul id="snackList"></ul>
+
+
+    <section class="projects-section">
+        <h2>My Projects</h2>
+        <div id="filterButton"></div>
+        <div id="projectGrid"></div>
+    </section>
+
+
+
     <footer>
         &copy; <span id="year">2022</span> My Portfolio
     </footer>
 </body>
+
 </html>

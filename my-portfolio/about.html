@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Rishop Babu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">Rishop Babu</a>
+    <div class="site-header__controls">
+      <button class="site-header__theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">🌙</button>
+      <button class="site-header__nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+    </div>
+    <nav class="site-header__nav" id="primary-nav">
+      <ul class="site-header__nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1>About Me</h1>
+      <p>
+        I'm Rishop Babu, a software engineer currently learning HTML and CSS to
+        strengthen my front-end skills. This portfolio is where I put what I learn into practice.
+      </p>
+    </section>
+
+    <section class="about-details">
+      <h2>What I've learned so far</h2>
+      <ul class="about-details__list">
+        <li>Semantic HTML structure and accessible markup</li>
+        <li>CSS layout with Flexbox and Grid, and mobile-first responsive design</li>
+        <li>Git for tracking changes to my projects</li>
+      </ul>
+    </section>
+
+    <section class="about-interests">
+      <h2>Outside the classroom</h2>
+      <p>
+        When I'm not coding, I like exploring new tech, reading, and learning something new every week.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year">2026</span> Rishop Babu. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

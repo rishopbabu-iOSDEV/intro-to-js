@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishop Babu | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">Rishop Babu</a>
+    <div class="site-header__controls">
+      <button class="site-header__theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">🌙</button>
+      <button class="site-header__nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+    </div>
+    <nav class="site-header__nav" id="primary-nav">
+      <ul class="site-header__nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <h1>Hi, I'm Rishop Babu.</h1>
+      <p id="greeting"></p>
+      <p class="hero__tagline">Software engineer learning HTML &amp; CSS &mdash; building for the web.</p>
+      <a href="projects.html" class="button button--primary">See my projects</a>
+    </section>
+
+    <section class="highlights">
+      <h2>What I'm working on</h2>
+      <div class="highlights__grid">
+        <article class="card">
+          <h3>Responsive design</h3>
+          <p>This site itself &mdash; hand-built with semantic HTML and CSS, no frameworks.</p>
+        </article>
+        <article class="card">
+          <h3>HTML &amp; CSS fundamentals</h3>
+          <p>Learning semantic markup, Flexbox and Grid to build clean, accessible pages.</p>
+        </article>
+        <article class="card">
+          <h3>Version control</h3>
+          <p>Every change to this site is tracked with Git.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year">2026</span> Rishop Babu. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

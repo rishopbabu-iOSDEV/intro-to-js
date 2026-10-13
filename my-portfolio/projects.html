@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Rishop Babu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="site-header__brand">Rishop Babu</a>
+    <div class="site-header__controls">
+      <button class="site-header__theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">🌙</button>
+      <button class="site-header__nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+    </div>
+    <nav class="site-header__nav" id="primary-nav">
+      <ul class="site-header__nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1>Projects</h1>
+      <p>
+        Things I've built while learning HTML and CSS. Use the filter buttons or the search box to narrow the list.
+      </p>
+    </section>
+
+    <section class="projects-controls">
+      <div class="projects-filter-bar" id="filter-buttons">
+        <!-- Rendered by script.js: one button per category found in projects-data.js, plus "All". -->
+      </div>
+      <div class="projects-search">
+        <label for="project-search">Search projects</label>
+        <input type="text" id="project-search" placeholder="Search by title or description&hellip;" />
+      </div>
+    </section>
+
+    <section class="projects-dynamic-mount" id="project-list">
+      <!-- Rendered by script.js from projects-data.js. -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year">2026</span> Rishop Babu. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="projects-data.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

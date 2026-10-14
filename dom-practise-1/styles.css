@@ -9,7 +9,6 @@
     color: red;
 }
 
-
 .siteNav {
     display: none;
 }
@@ -31,6 +30,20 @@
 .project-card {
     display: flexbox;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: space-between;
+}
+
+.error-message {
+    display: none;
+    color: #c0392b;
+    font-size: 14px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.success-message {
+    color: #1e8449;
 }

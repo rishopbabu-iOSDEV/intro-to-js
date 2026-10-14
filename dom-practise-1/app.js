@@ -1,3 +1,10 @@
+//Apply Saved theme 
+const savedTheme = localStorage.getItem('theme');
+console.log(`Last Saved theme is ${savedTheme}`)
+if (savedTheme === 'dark') {
+    document.body.classList.add('darkMode');
+}
+
 // QuerySelector - Select's first element
 const heading = document.querySelector("#title");
 console.log(heading);
@@ -105,6 +112,11 @@ navToggle.addEventListener('click', function () {
 const themeToggle = document.querySelector("#darkAndLight");
 themeToggle.addEventListener('click', function() {
     document.body.classList.toggle('darkMode');
+    if (document.body.classList.contains('darkMode')) {
+        localStorage.setItem('theme', 'dark')
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 })
 
 
@@ -230,53 +242,92 @@ function applyFilters(category) {
 }
 
 
+// Form Submission
+
+const contactForm = document.querySelector('#contact-form');
+
+//contactForm.addEventListener('submit', function (event) {
+//   //event.preventDefault(); // stop the browser's default reload
+//   console.log('Submit intercepted — the page did NOT reload.');
+// });
+contactForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    const name=document.querySelector("#name").value.trim();
+    const email=document.querySelector("#email").value.trim();
+    const message=contactForm.querySelector("#message").value.trim();
+    
+    let isFormValid = formValidation(name, email, message)
+
+    console.log(`isFormValid: ${isFormValid}`)
+    
+    if (isFormValid) {
+        const messages = JSON.parse(localStorage.getItem('messages')) || [];
+        messages.push({name, email, message});
+        localStorage.setItem('messages', JSON.stringify(messages));
+        console.log(messages)
+    }
+    
+})
+
+
+function isEmailValid(value) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    return emailPattern.test(value);
+}
+
+console.log(isEmailValid('rishop.@gmail.in'))
 
 
 
+function showError(fieldId, show) {
+    const errorElement = document.querySelector(`#${fieldId}-error`);
+    errorElement.classList.toggle('show', show)
+}
+
+function formValidation(name, email, message) {
+    let isValid = true;
+
+    if (name === "") {
+        showError('name', true);
+        isValid = false;
+    } else {
+        showError('name', false);
+    }
+
+    if (email === '' || !isEmailValid(email)) {
+        showError('email', true);
+        isValid = false
+    } else {
+        showError('email', false)
+    }
+
+    if (message === '') {
+        showError('message', true);
+        isValid = false
+    } else {
+        showError('message', false);
+    }
+
+    return isValid;
+}
+
+localStorage.setItem('color', 'blue');
+console.log(localStorage.getItem('color'));
+localStorage.removeItem('color');
+console.log(localStorage.getItem('color'));
+
+const student = {name: 'Rishop', favouriteSubject: 'JavaScript'}
+localStorage.setItem('student1', JSON.stringify(student))
+console.log(localStorage.getItem('student1'))
+console.log(JSON.parse(localStorage.getItem('student1')).favouriteSubject);
+
+// localStorage.setItem()
 
 
+// 1. Save an array of 3 favourite things under the key 'favourites',
+//    json stringify.
+// 2. Reload it, then parse the data with json parse and console log
+//    second item of the array.
+// 3. Find the Raw string in the application tab.
 
-
-
-
-
-
-
-
-
-
-
-
-console.log(projects.filter(project => project.category === "Web"))
-
-// console.log(projects.map(project => project.category));
-
-// console.log(new Set(projects.map(project => project.category)));
-
-// console.log(["All", ...new Set(projects.map(project => project.category))]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(["All", ...new Set(projects.map(project => project.category))])
 
